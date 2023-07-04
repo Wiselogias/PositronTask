@@ -10,7 +10,7 @@ class ShopFragmentController @Inject constructor(
 ): ShopController {
     lateinit var shopView: ShopView
 
-    override suspend fun getItems() = getItemsUseCase.invoke(Unit).take(1).collect {
+    override suspend fun getItems() = getItemsUseCase.invoke(Unit).collect {
         shopView.fillData(it)
     }
 }

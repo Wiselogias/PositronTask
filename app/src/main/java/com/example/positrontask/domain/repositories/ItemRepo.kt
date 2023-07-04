@@ -1,9 +1,10 @@
 package com.example.positrontask.domain.repositories
 
 import com.example.positrontask.domain.entities.ItemEntity
+import kotlinx.coroutines.flow.Flow
 
 interface ItemRepo {
-    suspend fun getItems(): List<ItemEntity>
-    suspend fun getItem(id: String): ItemEntity
-    suspend fun addItem(itemEntity: ItemEntity)
+   fun getItems(): Flow<List<ItemEntity>>
+   fun getItem(id: String): Flow<ItemEntity>
+   suspend fun addItem(itemEntity: ItemEntity)
 }

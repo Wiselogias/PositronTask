@@ -35,11 +35,11 @@ class StartFragment: BaseFragment<MainActivity>(){
 
         binding = StartFragmentBinding.inflate(inflater, container, false)
 
-        baseActivity.lifecycleScope.launch {
-            controller.updateData()
-        }
 
         binding.startButton.setOnClickListener {
+            baseActivity.lifecycleScope.launch {
+                controller.updateData()
+            }
             findNavController().navigate(R.id.action_startFragment_to_shopFragment)
         }
         return binding.root

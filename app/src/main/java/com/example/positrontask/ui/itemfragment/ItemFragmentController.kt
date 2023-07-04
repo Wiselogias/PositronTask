@@ -9,7 +9,7 @@ class ItemFragmentController @Inject constructor(
 ): ItemController {
     lateinit var itemView: ItemView
 
-    override suspend fun fillData(id: String) = getItemUseCase.invoke(id).take(1).collect {
+    override suspend fun fillData(id: String) = getItemUseCase.invoke(id).collect {
         itemView.fillData(it)
     }
 }
