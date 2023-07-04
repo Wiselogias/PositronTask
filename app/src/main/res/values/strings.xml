@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PositronTask</string>
+    <string name="start">Start</string>
+    <string name="vendor_code">Vendor code</string>
+    <string name="price">Price</string>
+    <string name="name">Name</string>
+    <string name="permissionsAlertTitle">permission alert title\n</string>
+    <string name="permissionsText">give permissions\n</string>
+</resources>
